@@ -13,11 +13,11 @@ class MentalHealthApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: NewsScreen.routeName,
+      initialRoute: HomeScreen.routeName,
       routes: {
         HomeScreen.routeName: (context)=> HomeScreen(),
-        WorkoutScreen.routeName: (context)=> WorkoutScreen(),
-        NewsScreen.routeName: (context)=> NewsScreen(),
+        WorkoutScreen.routeName: (context)=> const WorkoutScreen(),
+        NewsScreen.routeName: (context)=> const NewsScreen(),
       },
     );
   }
