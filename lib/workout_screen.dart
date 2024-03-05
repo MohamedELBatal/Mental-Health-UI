@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mental_health_app/workout_programs_tab.dart';
+import 'package:badges/badges.dart' as badges;
 
 class WorkoutScreen extends StatelessWidget {
   static const String routeName = "WorkoutScreen";
@@ -41,9 +42,9 @@ class WorkoutScreen extends StatelessWidget {
                     ],
                   ),
                   const Spacer(),
-                  const Icon(
-                    Icons.notification_add_outlined,
-                    size: 35,
+                  badges.Badge(
+                    position: badges.BadgePosition.custom(top: 0, end: 2),
+                    child: const Icon(Icons.notifications_none_outlined),
                   ),
                 ],
               ),
@@ -103,24 +104,29 @@ class WorkoutScreen extends StatelessWidget {
             ),
             const Expanded(
               child: TabBarView(
-                children: [
-                  WorkoutProgramsTab()
-                ],
+                children: [WorkoutProgramsTab()],
               ),
             ),
-                BottomNavigationBar(
-                    elevation: 0,
-                    iconSize: 30,
-                    unselectedItemColor: Colors.grey[500],
-                    selectedItemColor: Colors.green,
-                    showUnselectedLabels: false,
-                    showSelectedLabels: false,
-                    items:  const [
-                      BottomNavigationBarItem(icon: Icon(Icons.home),label: ""),
-                      BottomNavigationBarItem(icon: ImageIcon(AssetImage("assets/images/d2/ic_navigator.png")),label: ""),
-                      BottomNavigationBarItem(icon: ImageIcon(AssetImage("assets/images/d2/ic_bar.png")),label: ""),
-                      BottomNavigationBarItem(icon: Icon(Icons.person_2_outlined),label: ""),
-                    ])
+            BottomNavigationBar(
+                elevation: 0,
+                iconSize: 30,
+                unselectedItemColor: Colors.grey[500],
+                selectedItemColor: Colors.green,
+                showUnselectedLabels: false,
+                showSelectedLabels: false,
+                items: const [
+                  BottomNavigationBarItem(icon: Icon(Icons.home), label: ""),
+                  BottomNavigationBarItem(
+                      icon: ImageIcon(
+                          AssetImage("assets/images/d2/ic_navigator.png")),
+                      label: ""),
+                  BottomNavigationBarItem(
+                      icon:
+                          ImageIcon(AssetImage("assets/images/d2/ic_bar.png")),
+                      label: ""),
+                  BottomNavigationBarItem(
+                      icon: Icon(Icons.person_2_outlined), label: ""),
+                ])
           ]),
         ),
       ),

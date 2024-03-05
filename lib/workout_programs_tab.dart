@@ -232,7 +232,6 @@ class WorkoutProgramsTab extends StatelessWidget {
                             ],
                           ),
                         ),
-                        const SizedBox(width: 10,),
                         Image.asset("assets/images/d2/blank.png"),
                       ],
                     ),
