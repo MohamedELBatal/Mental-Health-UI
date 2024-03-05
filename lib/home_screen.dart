@@ -159,6 +159,7 @@ class HomeScreen extends StatelessWidget {
                 Column(
                   children: [
                    Center(child: Image.asset("assets/images/d1/exercise1.png"),),
+                   SizedBox(height: 15,),
                    Center(child: Image.asset("assets/images/d1/exercise2.png")),
                   ],
                 ),
