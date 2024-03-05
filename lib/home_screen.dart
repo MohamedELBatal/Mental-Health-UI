@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:badges/badges.dart' as badges;
 
 class HomeScreen extends StatelessWidget {
   static const String routeName = "HomeScreen";
@@ -15,10 +16,13 @@ class HomeScreen extends StatelessWidget {
         appBar: AppBar(
           leading: Image.asset("assets/images/d1/logo1.png"),
           title: const Text("Moody"),
-          actions: const [
+          actions:  [
             Padding(
-              padding: EdgeInsets.all(18.0),
-              child: Icon(Icons.notification_add_outlined,size: 29,),
+              padding: const EdgeInsets.all(18.0),
+              child: badges.Badge(
+                position: badges.BadgePosition.custom(top: 0,end: 2),
+                child: const Icon(Icons.notifications_none_outlined),
+              ),
             ),
           ],
         ),
