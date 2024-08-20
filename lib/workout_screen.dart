@@ -12,6 +12,7 @@ class WorkoutScreen extends StatelessWidget {
     return DefaultTabController(
       length: 4,
       child: Scaffold(
+        appBar: AppBar(toolbarHeight: 50,),
         body: SafeArea(
           child:
               Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
